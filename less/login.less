@@ -1,0 +1,124 @@
+.login{
+	max-width: 1000px;
+	margin:100px auto;
+	h1,h3{
+		margin-top: 15px;
+	}
+	hr{
+		position: relative;
+		top:-15px;
+		left: 0;
+		z-index: 0;
+
+		margin-bottom: 70px;
+	}
+	ul{
+		position: relative;
+		top: 0;
+		left: 0;
+		
+		//background-color: black;
+		width: 300px;
+		height: 310px;
+		margin: 0 auto;
+
+		overflow-x: hidden;
+	}
+	li{
+		position: absolute;
+		top:0;
+		float: left;
+	}
+}
+.content-wrap{
+	border: 1px solid #FFF;
+	margin: 0 50px;
+
+	font-size: 40px;
+	text-align: center;
+}
+.log-sign{
+	position: relative;
+	top: 0;
+	left: 0;
+
+	width: 250px;
+	height: 30px;
+	margin: 65px auto 0 auto;
+	z-index: 3;
+	
+	
+	background-color: #fff;
+	font-size: 25px;
+}
+.nav-sign {
+	color: #515151;
+	display: inline-block;
+
+	padding: 0 10px;
+	width: 60px;
+	&:hover{
+		color:#111;
+		font-weight: bold;
+	}
+}
+
+.input-wrap{
+	position: relative;
+	top:0;
+	left: 0;
+
+	margin: 15px 0;
+
+	input,button{
+		display:inline-block;
+
+		border: 1px solid #ddd;
+		border-radius: 0 4px 4px 0;
+	}
+	&,input,button{
+		box-sizing: border-box;
+		width: 300px;
+		height: 44px;
+	}
+	input{
+		position: absolute;
+		top: 0px;
+		left: 0;
+		padding: 0 10px;
+		&:focus{
+			border-color: #3dbcf5 - 20;
+		}
+	}
+	overflow: hidden;
+}
+.signup-box{
+	left: 0px;
+}
+.signin-box{
+	left: 300px;
+}
+.signin-btn,.signup-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: 20px;
+}
+.signin-btn{
+	background-color: #6bd95b;
+	&:hover{
+		background-color: #6bd95b + 20;
+	}
+}
+.signup-btn{
+
+	background-color: #3dbcf5;
+	&:hover{
+		background-color: #3dbcf5 + 20;
+	}
+}
+.active{
+	font-weight: bold;
+	color:#111;
+}

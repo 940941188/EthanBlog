@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+@import "../lib/com.less";
+
+@sidebar-size:45px;
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: @sidebar-size;
+	background-color: #2a2a2a;
+	z-index: 20;
+}
+.sidebar-menu {
+	position: relative;
+	top: 0;
+	right: 0;
+	width: @sidebar-size;
+}
+.sidebar-btn {
+	height: @sidebar-size;
+	width: @sidebar-size;
+	//background-color: #d1d1d1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+
+
+	&:hover{
+		&::before{
+			content: "";
+			top: -@sidebar-size;
+		}
+		&::after{
+			content: "";
+			top: 0;
+
+		}
+	}
+	&::before{//icon
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: @sidebar-size;
+		width: @sidebar-size;
+		font-size: 20px;
+		color: #fff;
+		text-align: center;
+		line-height: @sidebar-size;
+		.transition(top 1s);
+
+	}
+	&::after{
+		content: "";
+		position: absolute;
+		top: @sidebar-size;
+		right: 0;
+		height: @sidebar-size;
+		width: @sidebar-size;
+		font-size: 16px;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		line-height: @sidebar-size;
+		background-color: #e78170;
+		.transition(top 1s);
+	}
+}
+.sidebar-item {
+	position: relative;
+	height: @sidebar-size;
+	width: @sidebar-size;
+	margin-bottom: 1px;
+	display: block;
+}
+
+.sidebar-set {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.sidebar-item-home {
+	.sidebar-btn{
+		&::before{
+			content: "E";
+			font-size: 30px;
+			font-weight: normal;
+		}
+		&::after{
+			content: "\e902";
+			font-size: 30px;
+			font-weight: normal;
+		}
+	}
+}
+.sidebar-item-demo {
+	.sidebar-btn{
+		&::before{
+			content: "\ea80";
+		}
+		&::after{
+			content: "DEMO";
+		}
+	}
+}
+.sidebar-item-list {
+	.sidebar-btn{
+		&::before{
+			content: "\e9bb";
+		}
+		&::after{
+			content: "LIST";
+		}
+	}
+}
